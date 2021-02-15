@@ -20,6 +20,7 @@ namespace platformer
         int speed = 2;
         int w = 125;
         int h = 285;
+        int g;
         public Form1()
         {
             
