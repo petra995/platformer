@@ -21,6 +21,7 @@ namespace platformer
         int w = 125;
         int h = 285;
         int g;
+        int gg;
         public Form1()
         {
             
