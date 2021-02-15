@@ -18,6 +18,8 @@ namespace platformer
         private int currAnimation = 0;
         bool isAnyKeyPressed = false;
         int speed = 2;
+        int w = 125;
+        int h = 285;
         public Form1()
         {
             
@@ -130,10 +132,10 @@ namespace platformer
         {
             if (currAnimation >= 5)
             {
-                Image part = new Bitmap(100, 230);
+                Image part = new Bitmap(w, h);
                 Graphics g = Graphics.FromImage(part);
-                g.DrawImage(playerImg, 0, 0, new Rectangle(new Point(75 * currFrame, 170 * (currAnimation-5)), new Size(100, 230)), GraphicsUnit.Pixel);
-                pictureBox1.Size = new Size(100, 230);
+                g.DrawImage(playerImg, 0, 0, new Rectangle(new Point(75 * currFrame, 170 * (currAnimation-5)), new Size(w, h)), GraphicsUnit.Pixel);
+                pictureBox1.Size = new Size(w,h);
                 pictureBox1.Image = part;
             }
 
@@ -142,10 +144,10 @@ namespace platformer
         {
             if(currAnimation != -1 && currAnimation <= 4)
             {
-                Image part = new Bitmap(100, 230);
+                Image part = new Bitmap(w, h);
                 Graphics g = Graphics.FromImage(part);
-                g.DrawImage(playerImg, 0, 0, new Rectangle(new Point(75 * currFrame, 170 * currAnimation), new Size(100, 230)), GraphicsUnit.Pixel);
-                pictureBox1.Size = new Size(100, 230);
+                g.DrawImage(playerImg, 0, 0, new Rectangle(new Point(75 * currFrame, 170 * currAnimation), new Size(w, h)), GraphicsUnit.Pixel);
+                pictureBox1.Size = new Size(w, h);
                 pictureBox1.Image = part;
             }
             
